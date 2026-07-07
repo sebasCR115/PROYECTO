@@ -110,7 +110,33 @@ footer{text-align:center;padding:20px;background:#aa00ff}
         54260 Canalejas, Jilotepec, Estado de México.
     </p>
 </section>
-<section id="contacto"><h2>Contacto</h2><form><input placeholder="Nombre"><input type="email" placeholder="Correo"><textarea placeholder="Mensaje"></textarea><button>Enviar</button></form><h3 style="margin-top:30px;">Redes Sociales</h3>
+<section id="contacto"><h2>Contacto</h2><form name="contacto" method="POST" data-netlify="true" action="gracias.html">
+    
+    <input type="hidden" name="form-name" value="contacto">
+
+    <input
+        type="text"
+        name="nombre"
+        placeholder="Nombre"
+        required
+    >
+
+    <input
+        type="email"
+        name="correo"
+        placeholder="Correo"
+        required
+    >
+
+    <textarea
+        name="mensaje"
+        placeholder="Mensaje"
+        required
+    ></textarea>
+
+    <button type="submit">Enviar</button>
+
+</form><h3 style="margin-top:30px;">Redes Sociales</h3>
 
 <div class="social"><a href="https://www.facebook.com/share/1J7gTYVupS/?mibextid=wwXIfr"><i class="fab fa-facebook"></i></a><a href="https://www.instagram.com/urba.nshopmx?igsh=bXVzMXZkbTdoMzZo&utm_source=qr"><i class="fab fa-instagram"></i></a></div></section>
 <a class="whatsapp" href="https://api.whatsapp.com/send/?phone=525573346103&text&type=phone_number&app_absent=0&wame_ctl=1"><i class="fab fa-whatsapp"></i></a>
