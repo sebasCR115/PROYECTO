@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SNEAKERS</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#007bff;color:#fff}
+header{position:sticky;top:0;background:#000;padding:15px;display:flex;gap:20px;justify-content:center}
+header a{color:#fff;text-decoration:none;cursor:pointer}
+section{display:none;padding:30px;min-height:80vh}.active{display:block}
+.hero{height:320px;background:#333;display:flex;align-items:center;justify-content:center;font-size:40px;font-weight:bold}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:#00f2ff;border-radius:12px;padding:15px;text-align:center;transition:.3s}
+.card:hover{transform:translateY(-8px)}
+.card img{width:100%;border-radius:8px}
+iframe{width:100%;height:350px;border:0}
+input,textarea{width:100%;padding:10px;margin:8px 0}
+button{padding:10px 20px;background:#ff00ff;color:#fff;border:none}
+.social a{
+  color:#ffffff;
+  font-size:80px;
+  margin:35px;
+  transition:0.9s;
+}
+
+.social a:hover{
+  transform:scale(1.3);
+  color:#324546;
+}
+.whatsapp{position:fixed;right:20px;bottom:20px;background:#25D366;color:#fff;padding:15px;border-radius:50%;font-size:28px}
+footer{text-align:center;padding:20px;background:#aa00ff}
+</style></head>
+<body>
+<header>
+<a onclick="show('inicio')">Inicio</a><a onclick="show('tenis')">Tenis</a><a onclick="show('ropa')">Ropa</a><a onclick="show('gorras')">Gorras</a><a onclick="show('accesorios')">Accesorios</a><a onclick="show('ubicacion')">Ubicación</a><a onclick="show('contacto')">Contacto</a>
+</header>
+<section id="inicio" class="active">
+
+  <div class="hero" style="position:relative;overflow:hidden;">
+
+  <img id="heroImg" src="P0.jpg"
+  style="width:100%;height:100%;object-fit:cover;border-radius:10px;">
+
+  <!-- TEXTO ENCIMA -->
+
+  <div id="heroText"
+    style="position:absolute;top:40%;left:50%;transform:translate(-50%,-50%);
+    color:white;font-size:40px;font-weight:bold;text-shadow:0 0 10px black;">
+    SNEAKERS
+  </div>
+
+  <!-- BOTONES -->
+  <button onclick="prevSlide()"
+    style="position:absolute;left:10px;top:50%;transform:translateY(-50%);
+    background:black;color:white;border:none;padding:10px;font-size:20px;">
+    ❮
+  </button>
+
+  <button onclick="nextSlide()"
+    style="position:absolute;right:10px;top:50%;transform:translateY(-50%);
+    background:black;color:white;border:none;padding:10px;font-size:20px;">
+    ❯
+  </button>
+
+</div>
+
+  <div style="padding:20px;max-width:900px;margin:auto;line-height:1.6">
+
+    <h2>¿Quiénes somos?</h2>
+    <p>
+      Somos una tienda en línea dedicada a ofrecer tenis, gorras, playeras y accesorios de las mejores marcas y de la más alta calidad.
+      Nuestro objetivo es brindar a nuestros clientes productos originales a precios competitivos, con una experiencia de compra fácil, segura y rápida.
+      Nos apasiona la moda urbana y deportiva, por lo que constantemente incorporamos las últimas tendencias para satisfacer todos los estilos.
+    </p>
+
+    <h2>Visión</h2>
+    <p>
+      Ser una de las tiendas en línea líderes en México en la venta de moda urbana y deportiva, reconocida por la calidad de sus productos,
+      la confianza de sus clientes y la innovación en el comercio electrónico, convirtiéndonos en la primera opción para quienes buscan estilo, autenticidad y comodidad.
+    </p>
+
+    <h2>Misión</h2>
+    <p>
+      Ofrecer a nuestros clientes una amplia variedad de tenis, ropa, gorras y accesorios de calidad, proporcionando una experiencia de compra en línea confiable,
+      accesible y eficiente, garantizando satisfacción, autenticidad y un excelente servicio.
+    </p>
+
+  </div>
+
+</section>
+<section id="tenis"><h2>Tenis</h2><div class="cards"><div class="card"><img src="IM/t1.jpg"><h3>Tenis 1</h3><p>$999 MXN</p><button>Comprar</button></div><div class="card"><img src="IM/t2.webp"><h3>Tenis 2</h3><p>$999 MXN</p><button>Comprar</button></div><div class="card"><img src="IM/t3.jpg"><h3>Tenis 3</h3><p>$999 MXN</p><button>Comprar</button></div><div class="card"><img src="IM/t4.webp"><h3>Tenis 4</h3><p>$999 MXN</p><button>Comprar</button></div></div></section><section id="ropa"><h2>Ropa</h2><div class="cards"><div class="card"><img src="IM/r1.webp"><h3>Ropa 1</h3><p>$999 MXN</p><button>Comprar</button>
+</div><div class="card"><img src="IM/r2.webp"><h3>Ropa 2</h3><p>$999 MXN</p><button>Comprar</button></div><div class="card"><img src="IM/r3.webp" class="slide">"><h3>Ropa 3</h3><p>$999 MXN</p><button>Comprar</button></div><div class="card"><img src="IM/r4.webp"><h3>Ropa 4</h3><p>$999 MXN</p><button>Comprar</button></div></div></section><section id="gorras"><h2>Gorras</h2><div class="cards"><div class="card"><img src="IM/g1.jpg"><h3>Gorras 1</h3><p>$999 MXN</p><button>Comprar</button></div><div class="card"><img src="IM/g2.webp"><h3>Gorras 2</h3><p>$999 MXN</p><button>Comprar</button></div><div class="card"><img src="IM/g3.webp"><h3>Gorras 3</h3><p>$999 MXN</p><button>Comprar</button></div><div class="card"><img src="IM/g4.webp"><h3>Gorras 4</h3><p>$999 MXN</p><button>Comprar</button></div></div></section><section id="accesorios"><h2>Accesorios</h2><div class="cards"><div class="card"><img src="IM/a1.webp"><h3>Accesorios 1</h3><p>$999 MXN</p><button>Comprar</button></div><div class="card"><img src="IM/a2.webp"><h3>Accesorios 2</h3><p>$999 MXN</p><button>Comprar</button></div><div class="card"><img src="IM/a3.webp"><h3>Accesorios 3</h3><p>$999 MXN</p><button>Comprar</button></div><div class="card"><img src="IM/a4.jpeg"><h3>Accesorios 4</h3><p>$999 MXN</p><button>Comprar</button></div></div></section>
+<section id="ubicacion">
+    <h2>Ubicación</h2>
+
+    <iframe
+        src="https://www.google.com/maps?q=Av.+Independencia+Manzana+018,+Bosque+de+los+Encinos,+54260+Canalejas,+Jilotepec,+Estado+de+México&output=embed"
+        width="100%"
+        height="350"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+    </iframe>
+
+    <h3>Arcos de cantera naranja SN</h3>
+    <p>
+        Av. Independencia Manzana 018,<br>
+        Bosque de los Encinos,<br>
+        54260 Canalejas, Jilotepec, Estado de México.
+    </p>
+</section>
+<section id="contacto"><h2>Contacto</h2><form><input placeholder="Nombre"><input type="email" placeholder="Correo"><textarea placeholder="Mensaje"></textarea><button>Enviar</button></form><h3 style="margin-top:30px;">Redes Sociales</h3>
+
+<div class="social"><a href="https://www.facebook.com/share/1J7gTYVupS/?mibextid=wwXIfr"><i class="fab fa-facebook"></i></a><a href="https://www.instagram.com/urba.nshopmx?igsh=bXVzMXZkbTdoMzZo&utm_source=qr"><i class="fab fa-instagram"></i></a></div></section>
+<a class="whatsapp" href="https://api.whatsapp.com/send/?phone=525573346103&text&type=phone_number&app_absent=0&wame_ctl=1"><i class="fab fa-whatsapp"></i></a>
+<footer>© 2026 SNEAKERS</footer>
+<script>
+function show(id){
+    document.querySelectorAll("section").forEach(s=>s.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+
+// Imágenes del carrusel
+const slides = [
+    "IM/t1.jpg",
+    "IM/r3.webp",
+    "IM/t3.jpg",
+    "IM/r1.webp"
+];
+
+// Texto de cada imagen
+const textos = [
+    "SNEAKERS",
+    "NUEVA COLECCIÓN",
+    "TENIS PREMIUM",
+    "ROPA URBANA"
+];
+
+let i = 0;
+
+function changeSlide(){
+    document.getElementById("heroImg").src = slides[i];
+    document.getElementById("heroText").innerHTML = textos[i];
+}
+
+function nextSlide(){
+    i = (i + 1) % slides.length;
+    changeSlide();
+}
+
+function prevSlide(){
+    i = (i - 1 + slides.length) % slides.length;
+    changeSlide();
+}
+
+// Cambia automáticamente cada 3 segundos
+setInterval(nextSlide,3000);
+</script>
